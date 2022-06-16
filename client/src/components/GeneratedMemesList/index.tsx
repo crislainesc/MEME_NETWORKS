@@ -22,7 +22,7 @@ const GeneratedMemesList: React.FC<{ memes: any }> = ({ memes }) => {
               <S.MemeImageText textTransfrom={meme.capitalLetters}>
                 {meme.topText}
               </S.MemeImageText>
-              <S.MemeImageText textTransfrom={meme.capitalLetters} isBottom>
+              <S.MemeImageText textTransfrom={meme.capitalLetters} isButton>
                 {meme.buttonText}
               </S.MemeImageText>
             </S.MemeImageTextContainer>

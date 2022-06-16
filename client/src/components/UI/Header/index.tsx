@@ -14,7 +14,7 @@ const Header: React.FC = ({}) => {
       <S.NavigationContainer>
         <Link to="/create-meme">Criar Meme</Link>
         <Link to="/recent-memes">Memes Recentes</Link>
-        <Link to="/home">Sair</Link>
+        <Link to="/">Sair</Link>
       </S.NavigationContainer>
     </S.HeaderContainer>
   );

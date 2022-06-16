@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface IMemeImageTextProps {
   fontSize: number;
   textTransfrom: boolean;
-  isBottom?: boolean;
+  isButton?: boolean;
 }
 
 export const CreateMemeContainer = styled.div`
@@ -34,7 +34,7 @@ export const MemeImageText = styled.p<IMemeImageTextProps>`
   text-transform: ${({ textTransfrom }) => (textTransfrom ? "uppercase" : "")};
   font-size: ${({ fontSize }) => (fontSize < 50 ? `${fontSize}px` : `50px`)};
   font-weight: bold;
-  bottom: ${({ isBottom }) => (isBottom ? "30px" : null)};
+  bottom: ${({ isButton }) => (isButton ? "30px" : null)};
 `;
 
 export const MemeImage = styled.img`

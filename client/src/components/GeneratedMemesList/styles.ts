@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface IMemeImageTextProps {
   textTransfrom: boolean;
-  isBottom?: boolean;
+  isButton?: boolean;
 }
 
 export const GeneratedMemesListContainer = styled.div`

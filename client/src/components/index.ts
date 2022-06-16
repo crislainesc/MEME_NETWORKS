@@ -5,6 +5,8 @@ import Header from "./UI/Header";
 import ListMemes from "./ListMemes";
 import Search from "./SearchMemes";
 import GeneratedMemesList from "./GeneratedMemesList";
+import Loading from "./UI/Loading";
+import Waiting from "./UI/Waiting";
 
 export {
   Button,
@@ -14,4 +16,6 @@ export {
   ListMemes,
   CreateMeme,
   GeneratedMemesList,
+  Loading,
+  Waiting,
 };

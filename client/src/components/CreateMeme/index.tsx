@@ -57,7 +57,7 @@ const CreateMeme: React.FC<{
         <S.MemeImageText
           fontSize={buttonTextFontSize}
           textTransfrom={capitalLetters}
-          isBottom
+          isButton
         >
           {buttonText}
         </S.MemeImageText>
