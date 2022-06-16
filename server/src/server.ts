@@ -21,12 +21,13 @@ io.on("connection", (socket: any) => {
             `${searchUrl}/${data.key}.json`
           );
 
-          if (response.error) {
+          if (!response) {
             socket.emit("searchWithKey", {
               requestId: 1,
               status: "not found",
               response: "Not possible search the image",
             });
+            break;
           }
 
           socket.emit("searchWithKey", {
@@ -47,12 +48,13 @@ io.on("connection", (socket: any) => {
         if (data.operation) {
           const response = await fetchApiRequestNoBody(`${searchUrl}.json`);
 
-          if (response.error) {
+          if (!response) {
             socket.emit("search", {
               requestId: 2,
               status: "not found",
               response: "Not possible search the images",
             });
+            break;
           }
 
           socket.emit("search", {
@@ -76,12 +78,13 @@ io.on("connection", (socket: any) => {
             data.body
           );
 
-          if (response.error) {
+          if (!response) {
             socket.emit("create", {
               requestId: 3,
               status: "not saved",
               response: "Not possible saved the image",
             });
+            break;
           }
 
           socket.emit("create", {
@@ -104,12 +107,13 @@ io.on("connection", (socket: any) => {
             `${showUrl}/${data.key}.json`
           );
 
-          if (response.error) {
+          if (!response) {
             socket.emit("showWithKey", {
               requestId: 4,
               status: "not found",
               response: "Not possible search the image",
             });
+            break;
           }
 
           socket.emit("showWithKey", {
@@ -130,12 +134,13 @@ io.on("connection", (socket: any) => {
         if (data.operation) {
           const response = await fetchApiRequestNoBody(`${showUrl}.json`);
 
-          if (response.error) {
+          if (!response) {
             socket.emit("showWithKey", {
               requestId: 4,
               status: "not found",
               response: "Not possible search the images",
             });
+            break;
           }
 
           socket.emit("show", {
