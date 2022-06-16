@@ -1,0 +1,11 @@
+{
+  "name": "meme_networks",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "client_install": "cd client && yarn",
+    "server_install": "cd server && yarn",
+    "client_start": "cd client && yarn dev",
+    "server_start": "cd server && yarn dev"
+  }
+}
